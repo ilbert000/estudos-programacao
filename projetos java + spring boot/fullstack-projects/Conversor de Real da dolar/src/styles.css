@@ -1,0 +1,152 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f6f7f9;
+  color: #111;
+}
+
+/* Header */
+.top-bar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.top-bar .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Menu */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #000;
+}
+
+/* Idiomas */
+.btn-idiomas button {
+  border: none;
+  background: #f1f3f5;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+/* Conteúdo */
+.main-content {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Card */
+.converter-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Cabeçalho do card */
+.converter-header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.converter-header p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/* Form */
+.converter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Inputs */
+input, select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #6366f1;
+}
+
+/* Resultado */
+.resultado-box {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.resposta {
+  text-align: center;
+}
+
+.resultado-valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.resultado-taxa {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia BlackStyle</title>
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <section class="page-inicial">
+            <header class="page-header">
+                <h1>Barbearia BlackStyle</h1>
+                <h2>Cortes Premium & Estilo Masculino</h2>
+                
+                <div class="status-container">
+                    <div id="statusIndicator" class="status-indicator">
+                        <i id="statusIcon" class="status-icon"></i>
+                        <span id="statusText">Verificando status...</span>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Botão para iniciar o agendamento -->
+            <button id="btnAgendar" class="btn-agendar">
+                <i class="fas fa-calendar-check"></i> Agendar Corte
+            </button>
+            
+            <!-- Tela de seleção de serviços -->
+            <div id="servicesScreen" class="spa-screen">
+                <h2 class="screen-title">Selecione seus serviços</h2>
+                
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Os serviços serão preenchidos via JavaScript -->
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button id="backToHome" class="btn-navigation">
+                        <i class="fas fa-arrow-left"></i> Voltar
+                    </button>
+                    <button id="toCart" class="btn-navigation btn-primary" disabled>
+                        Continuar para Carrinho <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Tela do carrinho -->
+            <div id="cartScreen" class="spa-screen">
+                <h2 class="screen-title">Seu Carrinho</h2>
+                
+                <div class="cart-items" id="cartItems">
+                    <!-- Itens do carrinho serão preenchidos via JavaScript -->
+                </div>
+                
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">R$ 0,00</span>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button id="backToServices" class="btn-navigation">
+                        <i class="fas fa-arrow-left"></i> Voltar para Serviços
+                    </button>
+                    <button id="toPayment" class="btn-navigation btn-primary">
+                        Continuar para Pagamento <i class="fas fa-credit-card"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Tela de pagamento -->
+            <div id="paymentScreen" class="spa-screen">
+                <h2 class="screen-title">Forma de Pagamento</h2>
+                
+                <div class="payment-options">
+                    <div class="payment-option" data-method="local">
+                        <i class="payment-icon fas fa-store"></i>
+                        <div class="payment-option-name">Pagamento no Local</div>
+                    </div>
+                    <div class="payment-option" data-method="online">
+                        <i class="payment-icon fas fa-globe"></i>
+                        <div class="payment-option-name">Pagamento Online</div>
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button id="backToCart" class="btn-navigation">
+                        <i class="fas fa-arrow-left"></i> Voltar para Carrinho
+                    </button>
+                    <button id="toScheduling" class="btn-navigation btn-primary" disabled>
+                        Continuar para Agendamento <i class="fas fa-calendar-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Tela de agendamento -->
+            <div id="schedulingScreen" class="spa-screen">
+                <h2 class="screen-title">Agendamento</h2>
+                
+                <form id="agendamentoForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" class="form-control" placeholder="Digite seu nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="data">Data do Agendamento</label>
+                        <input type="date" id="data" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hora">Horário Preferencial</label>
+                        <input type="time" id="hora" class="form-control" min="06:00" max="17:00" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone para Contato</label>
+                        <input type="tel" id="telefone" class="form-control" placeholder="(00) 00000-0000" required>
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button id="backToPayment" type="button" class="btn-navigation">
+                            <i class="fas fa-arrow-left"></i> Voltar para Pagamento
+                        </button>
+                        <button type="submit" class="btn-navigation btn-primary">
+                            Confirmar Agendamento <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Tela de confirmação -->
+            <div id="confirmationScreen" class="spa-screen confirmation-screen">
+                <i class="confirmation-icon fas fa-check-circle"></i>
+                <h2 class="confirmation-title">Agendamento Confirmado!</h2>
+                
+                <div class="confirmation-details" id="confirmationDetails">
+                    <!-- Detalhes do agendamento serão preenchidos via JavaScript -->
+                </div>
+                
+                <p>Entraremos em contato para confirmação.</p>
+                
+                <button id="newAppointment" class="btn-navigation btn-primary" style="margin-top: 20px;">
+                    <i class="fas fa-plus"></i> Novo Agendamento
+                </button>
+            </div>
+            
+            <!-- Informações de horário -->
+            <div class="schedule-info">
+                <p><strong>Horário de Funcionamento:</strong></p>
+                <ul class="hours-list" id="hoursList">
+                    <!-- Horários serão preenchidos via JavaScript -->
+                </ul>
+                <p style="margin-top: 10px; color: #ff9800;">Fechado às sextas e sábados</p>
+            </div>
+        </section>
+    </div>
+    <script src="./src/script.js"></script>
+</body>
+</html>

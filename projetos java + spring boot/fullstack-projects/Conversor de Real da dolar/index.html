@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles.css" />
+  <title>ConveMoeda</title>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="top-bar">
+    <div class="container">
+      <h1 class="logo">ConveMoeda</h1>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="https://einvestidor.estadao.com.br/radar-einvestidor/moeda-mais-cara-do-mundo-ranking-2024/">Outras moedas</a></li>
+          <li><a href="https://www.serasa.com.br/blog/saiba-como-fazer-conversao-de-moedas/">Sobre</a></li>
+        </ul>
+      </nav>
+
+      <div class="btn-idiomas">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="pt">PT</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="main-content">
+
+    <section class="converter-section">
+
+      <div class="converter-card">
+
+        <header class="converter-header">
+          <h2>Conversor de Moedas</h2>
+          <p>Converta valores entre moedas do mundo todo</p>
+        </header>
+
+        <form class="converter-form" onsubmit="return false;">
+
+          <div class="field">
+            <label for="moeda-origem">Moeda de origem</label>
+            <select id="moeda-origem">
+              <option value="BRL">Real (BRL)</option>
+              <option value="USD">Dólar (USD)</option>
+              <option value="EUR">Euro (EUR)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="valor">Valor</label>
+            <input 
+              id="valor"
+              type="number"
+              placeholder="Digite o valor"
+              min="0"
+              step="0.01"
+            />
+          </div>
+
+          <div class="field">
+            <label for="moeda-destino">Moeda de destino</label>
+            <select id="moeda-destino">
+              <option value="USD">Dólar (USD)</option>
+              <option value="EUR">Euro (EUR)</option>
+              <option value="BRL">Real (BRL)</option>
+            </select>
+          </div>
+
+        </form>
+
+        <div class="resultado-box">
+          <output class="resposta"></output>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="./API/api.js"></script>
+  <script src="./src/conversao.js"></script>
+  <script type="module" src="./dist/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles.css">
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <title>Formulário de Cadastro</title>
+</head>
+<body>
+
+  <header>
+    <h1>Formulário de Cadastro</h1>
+    <p>Preencha todos os campos obrigatórios</p>
+  </header>
+
+  <main>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <label for="nome">Nome completo:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone"><br><br>
+
+        <label for="nascimento">Data de nascimento:</label><br>
+        <input type="date" id="nascimento" name="nascimento"><br><br>
+        
+        <!-- Novo campo: Currículo -->
+        <label for="curriculo">Anexar Currículo (PDF, DOC, DOCX):</label><br>
+        <input 
+          type="file" 
+          id="curriculo" 
+          name="curriculo"
+          accept=".pdf,.doc,.docx,.txt"
+          required
+        >
+        <small>Formatos aceitos: PDF, DOC, DOCX, TXT (Tamanho máximo: 5MB)</small><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sexo</legend>
+
+        <input type="radio" id="sexo-m" name="sexo" value="masculino" required>
+        <label for="sexo-m">Masculino</label><br>
+
+        <input type="radio" id="sexo-f" name="sexo" value="feminino">
+        <label for="sexo-f">Feminino</label><br>
+
+        <input type="radio" id="sexo-o" name="sexo" value="outro">
+        <label for="sexo-o">Outro</label>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>PCD (Pessoa com Deficiência)</legend>
+
+        <input type="radio" id="pcd-sim" name="pcd" value="sim" required>
+        <label for="pcd-sim">Sim</label><br>
+
+        <input type="radio" id="pcd-nao" name="pcd" value="nao">
+        <label for="pcd-nao">Não</label><br><br>
+
+        <label for="pcd-tipo">Se sim, informe o tipo:</label><br>
+        <input type="text" id="pcd-tipo" name="pcd_tipo" placeholder="Ex: visual, auditiva, motora"><br><br>
+
+        <label for="pcd-doc">Anexar documento comprobatório:</label><br>
+        <input 
+          type="file" 
+          id="pcd-doc" 
+          name="pcd_documento"
+          accept=".pdf,.jpg,.jpeg,.png"
+        >
+        <small>Formatos aceitos: PDF, JPG, PNG (Tamanho máximo: 2MB)</small>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Confirmação</legend>
+
+        <input type="checkbox" id="termos" name="termos" required>
+        <label for="termos">Declaro que as informações são verdadeiras</label>
+      </fieldset>
+
+      <br>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Formulário de Cadastro</p>
+  </footer>
+
+    <!-- Script GSAP personalizado -->
+  <script src="./src/script.js"></script>
+
+</body>
+</html>

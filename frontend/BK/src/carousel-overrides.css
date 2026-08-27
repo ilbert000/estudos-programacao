@@ -1,0 +1,8 @@
+/* Small overrides and carousel controls */
+.carousel-cards { position: relative; }
+.track { display: flex; }
+.card-nav { box-shadow: 0 4px 8px rgba(0,0,0,0.12); }
+#card-play { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(80,35,20,0.85); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; z-index: 5; }
+.carousel-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display:flex; gap:8px; }
+.carousel-dot { width:10px;height:10px;border-radius:50%;border:none;background:rgba(0,0,0,0.18); }
+.carousel-dot.active { background: rgba(80,35,20,0.95); }

@@ -1,0 +1,87 @@
+
+.item{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.item.active{
+    display: block;
+}
+
+.item .title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 24rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: surgir 0.5s ease-out forwards;
+}
+
+.item .fruit{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    animation: surgir 1s ease-out forwards;
+}
+
+.item .refri{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: surgir 1s ease-out forwards;
+} 
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    top: 100%;
+  }
+}
+
+
+
+#prev, #next{
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgba(0, 0, 0, 0.349);
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    border: solid 2px white;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 4;
+    transition: 0.5s;
+}
+
+#prev:hover{
+    scale: calc(1.1);
+    transition: 0.5s;
+}
+
+#next:hover{
+    scale: calc(1.1);
+    transition: 0.5s;
+}
+
+#next{
+    right: 30px;
+}
+
+#prev{
+    left: 30px;
+}

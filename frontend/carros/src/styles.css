@@ -1,0 +1,134 @@
+body{
+    background-color: rgb(86, 8, 86);
+}
+
+header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    position: absolute;
+    left: 50vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header ul{
+    display: flex;
+    text-align: center;
+    gap: 150px;
+}
+
+header ul a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    cursor: pointer;
+}
+
+.item{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.item.active{
+    display: block;
+}
+
+.linha{
+    width: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 30vh;
+    background-color: white;
+    height: 2px;
+    align-items: center;
+}
+
+.item .carro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: Entrada 0.5s ease-out forwards;
+}
+
+@keyframes Entrada{
+    from{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.item .titulo{
+    position: absolute;
+    top: 40%;
+    left: 68%;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+}
+
+.item .texto{
+    position: absolute;
+    top: 55%;
+    left: 65%;
+    width: 300px;
+    text-align: end;
+    color: white;
+}
+
+.number{
+    position: absolute;
+    top: 65%;
+    left: 30vh;
+    text-decoration:underline;
+    font-size: 4rem;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+#next, #prev{
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 50px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#next{
+    right: 300px;
+}
+#next:hover{transition: 0.5s; background-color: green;}
+
+#prev{
+    left: 300px;
+}
+#prev:hover{transition: 0.5s; background-color: green;}
+
+#SaibaMais{
+    position: absolute;
+    top: 70%;
+    left: 69%;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+}

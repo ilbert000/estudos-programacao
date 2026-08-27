@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guarda Roupas</title>
+</head>
+<body>
+
+    <h1>Meu Guarda Roupas</h1>
+
+    <h2>Moletom</h2>
+    <h2>Camisas</h2>
+    <h2>Calças</h2>
+    <h2>Tênis</h2>
+
+    <button onclick="logout()">Sair</button>
+
+    <script>
+        // 🔐 Verifica se está logado
+        const usuario = localStorage.getItem("usuarioLogado");
+
+        if (!usuario) {
+            window.location.href = "index.html";
+        }
+
+        function logout() {
+            localStorage.removeItem("usuarioLogado");
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
